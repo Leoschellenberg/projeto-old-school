@@ -14,7 +14,7 @@ header {
     background-image: url("/src/assets/image-header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-position: bottom center;
 }
 
 header nav {
@@ -27,13 +27,11 @@ header nav {
 header nav img {
     padding: 2rem;
     height: 100%;
-    width: auto;
 }
 
 header nav ul {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    width: 100%;
     padding: 2rem;
     align-items: center;
     gap: 2rem;
@@ -46,6 +44,7 @@ header nav a {
 }
 
 .link-contact {
+    text-align: center;
     font-family: 'Times New Roman', Times, serif;
     background-color: white;
     padding: .8rem 1.5rem;
@@ -59,7 +58,7 @@ header nav a {
     text-transform: uppercase;
 }
 
-header section {
+header .div-banner {
     display: flex;
     height: auto;
     flex-direction: column;
@@ -67,10 +66,11 @@ header section {
     gap: 5rem;
 }
 
-header section h1 {
+header .div-banner h1 {
     color: white;
     font-size: 4rem;
     margin-top: 8rem;
+    text-align: center;
 }
 
 .section-cards {
@@ -126,7 +126,7 @@ header section h1 {
 section #bg-cherry {
     display: flex;
     width: 100%;
-    height: 600px;
+    height: 37.5rem;
     justify-content: flex-end;
     align-items: center;
     background: url("/src/assets/image-graphic-design.jpg");
@@ -140,7 +140,7 @@ section #bg-orange {
     width: 100%;
     justify-content: flex-end;
     align-items: center;
-    height: 600px;
+    height: 37.5rem;
     background: url("/src/assets/image-photography.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -168,9 +168,28 @@ section #bg-cherry p {
     padding: 0 5rem 5rem 5rem;
 }
 
+@media(max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media(max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+    header nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 @media(max-width: 900px) {
     .section-cards {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
+        text-align: center;
     }
 }
+
+@media(max-width: 650px) {}
