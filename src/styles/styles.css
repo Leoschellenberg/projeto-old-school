@@ -1,45 +1,50 @@
+/* ---------RESET ELEMENTS---------- */
+
 html {
     height: 100%;
     font-family: 'Times New Roman', Times, serif;
 }
 
-* {
+*,
+li,
+a {
     margin: 0;
     padding: 0;
-}
-
-header {
-    max-width: 100%;
-    height: 100vh;
-    background-image: url("/src/assets/image-header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-}
-
-header nav img {
-    padding: 2rem;
-    height: 100%;
-}
-
-header nav ul {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    padding: 2rem;
-    align-items: center;
-    gap: 2rem;
+    box-sizing: border-box;
+    text-decoration: none;
     list-style-type: none;
 }
 
-header nav a {
-    text-decoration: none;
+
+/* -------------------------------- */
+
+
+/* ---------- NAVEGATION ---------- */
+
+.dv-container-nav {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.logo {
+    height: 100%;
+}
+
+.nav-ul {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
     color: white;
 }
 
@@ -58,58 +63,74 @@ header nav a {
     text-transform: uppercase;
 }
 
-header .div-banner {
+
+/* ---------- END NAVEGATION ---------- */
+
+
+/* --------------SECTION ---------------*/
+
+header {
     display: flex;
-    height: auto;
     flex-direction: column;
+    gap: 4rem;
+    max-width: 100%;
+    height: 100vh;
     align-items: center;
-    gap: 5rem;
+    justify-content: center;
+    background-image: url("/src/assets/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
 }
 
-header .div-banner h1 {
+.sc-title {
     color: white;
     font-size: 4rem;
-    margin-top: 8rem;
     text-align: center;
 }
 
-.section-cards {
+
+/*-------------- END SECTION --------------*/
+
+.dv-section {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
+    height: 100%;
 }
 
-.section-cards img {
+.sc-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sc-atc-img {
     display: block;
     width: 100%;
     min-height: 100%;
 }
 
-.section-cards div {
+.sc-atc-content {
     display: flex;
-    height: 100%;
-    width: 70%;
-    margin: 0 auto;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    padding: 10%;
+    text-align: justify;
+    gap: 1rem;
 }
 
-.section-cards div h1 {
+.sc-atc-title {
     font-weight: bold;
     font-size: 3rem;
-    width: 15ch;
     color: rgba(40, 31, 61, 0.904);
 }
 
-.section-cards div p {
+.sc-atc-text {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(102, 102, 102);
 }
 
-.section-cards div a {
+.sc-atc-link {
     text-decoration: none;
     font-weight: bold;
     color: black;
@@ -117,57 +138,100 @@ header .div-banner h1 {
     width: max-content;
 }
 
-.section-backgroud div {
+.sc-dv-container {
+    display: block;
     position: relative;
-    display: flex;
-    width: 100%;
 }
 
-section #bg-cherry {
+.sc-dv-content {
+    position: absolute;
     display: flex;
-    width: 100%;
-    height: 37.5rem;
-    justify-content: flex-end;
+    gap: 1rem;
+    flex-direction: column;
+    bottom: 0;
     align-items: center;
-    background: url("/src/assets/image-graphic-design.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
+    justify-content: center;
+    padding: 10% 20%;
 }
 
-section #bg-orange {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-    height: 37.5rem;
-    background: url("/src/assets/image-photography.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-}
-
-section #bg-cherry h1 {
+.sc-dv-title {
     font-size: 2rem;
     color: rgba(41, 49, 41, 0.795);
 }
 
-section #bg-orange h1 {
-    font-size: 2rem;
-    color: rgba(41, 49, 41, 0.795);
-}
-
-section #bg-orange p {
+.sc-dv-text {
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(41, 49, 41, 0.795);
-    padding: 0 5rem 2rem 5rem;
+    text-align: center;
 }
 
-section #bg-cherry p {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgba(41, 49, 41, 0.795);
-    padding: 0 5rem 2rem 5rem;
+
+/* ----------------- END ------------------- */
+
+
+/* ----------------- TESTEMONIALS ------------------- */
+
+.section-testmonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding: 10rem;
+    background-color: rgb(247, 247, 247)
 }
+
+.sc-tm-title {
+    color: rgb(182, 182, 182);
+    font-size: 1.3rem;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.sc-tml-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.sc-testmonials {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sc-tm-image {
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.sc-tm-text {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(105, 105, 105);
+}
+
+.sc-tml-profile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .8rem;
+}
+
+.sc-tml-pf-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sc-tml-pf-cargo {
+    color: rgb(54, 54, 54);
+}
+
+
+/* ----------------- END ------------------- */
 
 @media(max-width: 1080px) {
     html {
@@ -179,18 +243,23 @@ section #bg-cherry p {
     html {
         font-size: 87.5%;
     }
-    header nav {
-        flex-direction: column;
-        justify-content: center;
-    }
-}
-
-@media(max-width: 900px) {
-    .section-cards {
+    .sc-article {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-auto-rows: 1fr;
         text-align: center;
     }
+    .sc-atc-content {
+        text-align: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .sc-article:nth-child(1) .orderOne {
+        order: 1;
+    }
+    .section-testmonials {
+        padding: 2rem;
+    }
+    .sc-tm-text {
+        font-size: 1.5rem;
+    }
 }
-
-@media(max-width: 650px) {}
