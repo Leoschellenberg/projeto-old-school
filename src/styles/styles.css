@@ -233,6 +233,20 @@ header {
 
 /* ----------------- END ------------------- */
 
+
+/* ----------------- SECTION IMAGES ------------------- */
+
+.section-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.sc-img-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
 @media(max-width: 1080px) {
     html {
         font-size: 93.75%;
@@ -257,9 +271,12 @@ header {
         order: 1;
     }
     .section-testmonials {
-        padding: 2rem;
+        padding: 4rem 2rem;
     }
     .sc-tm-text {
         font-size: 1.5rem;
+    }
+    .section-images {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
