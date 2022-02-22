@@ -63,6 +63,13 @@ a {
     text-transform: uppercase;
 }
 
+.nav-btn-menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 
 /* ---------- END NAVEGATION ---------- */
 
@@ -257,9 +264,13 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    padding: 2rem;
+    padding: 4rem 2rem;
     place-items: center;
     background-color: rgb(178, 226, 202);
+}
+
+.footer-logo {
+    width: 10rem;
 }
 
 .ft-ul-nav {
@@ -267,6 +278,7 @@ header {
     gap: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(70, 88, 70, 0.548);
+    font-size: 1.3rem;
 }
 
 .ft-ul-social {
@@ -284,6 +296,12 @@ header {
 @media(max-width: 768px) {
     html {
         font-size: 87.5%;
+    }
+    .nav-ul {
+        display: none;
+    }
+    .nav-btn-menu-mobile {
+        display: block;
     }
     .sc-article {
         grid-template-columns: 1fr;
